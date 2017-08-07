@@ -39,8 +39,8 @@ def train():
     
     summary_writer = tf.summary.FileWriter('./summaries/')
     config = tf.ConfigProto()
-    config.gpu_options.allow_growth = True # 根据需要分配显存
-    config.allow_soft_placement = True # 自动选择设备
+    #config.gpu_options.allow_growth = True # 根据需要分配显存
+    #config.allow_soft_placement = True # 自动选择设备
 
     # Start session
     sess = tf.Session(config=config)
