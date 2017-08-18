@@ -14,7 +14,7 @@ import os, codecs
 from tqdm import tqdm
 from nltk.translate.bleu_score import corpus_bleu
 
-step_num = 100000
+step_num = 80000
 
 
 def train():

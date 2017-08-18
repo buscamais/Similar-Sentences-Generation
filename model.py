@@ -249,12 +249,12 @@ class TransGAN(object):
             self.D_loss = self.SIGMA * (disc_loss + self.LAMBDA * gradient_penalty)
             self.G_loss = self.content_loss + self.SIGMA * gen_loss
             self.D_opt = tf.train.AdamOptimizer(
-                learning_rate=hp.learning_rate,
+                learning_rate=hp.D_learning_rate,
                 beta1=0.5,
                 beta2=0.9
             ).minimize(self.D_loss, var_list=self.D_params)
             self.G_opt = tf.train.AdamOptimizer(
-                learning_rate=hp.learning_rate,
+                learning_rate=hp.G_learning_rate,
                 beta1=0.8,
                 beta2=0.98,
                 epsilon=1e-8

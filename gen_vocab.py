@@ -9,6 +9,7 @@ yinmiaothink@gmail.com
 import codecs
 import os
 from collections import Counter
+from hyperparams import Hyperparams as hp
 
 def gen_vocab(files, source_file, target_file):
     source_word_cnt = Counter()
@@ -40,8 +41,8 @@ def gen_vocab(files, source_file, target_file):
 
 if __name__ == '__main__':
     files = []
-    files.append('../data/train.txt')
-    files.append('../data/test.txt')
+    files.append(hp.train_file)
+    files.append(hp.test_file)
     gen_vocab(files, 'source_vocab.tsv', 'target_vocab.tsv')
 
 
