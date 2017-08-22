@@ -1,2 +1,2 @@
 # TransGAN
-This project is currently confidential.
+The code of Transformer is referred to https://github.com/Kyubyong/transformer.
